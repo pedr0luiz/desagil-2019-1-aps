@@ -56,16 +56,11 @@ public class GateView extends FixedPanel implements ItemListener {
             add(inputBox, x, y, SWITCH_SIZE, SWITCH_SIZE);
         }
 
-        if(outputSize==1){
-            y = 0;
-        }
-        else{
-            y = -(SWITCH_SIZE / (outputSize+1));
-        }
+        y = -(SWITCH_SIZE / 2);
         stepOutput = (GATE_HEIGHT / (outputSize + 1));
 
         for (int i = 0; i < outputSize; i++) {
-            y+=step;
+            y+=stepOutput;
             add(outputBox[i], BORDER + SWITCH_SIZE + GATE_WIDTH, y , SWITCH_SIZE, SWITCH_SIZE);
         }
 

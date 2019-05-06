@@ -34,9 +34,8 @@ public class HalfAdder extends Gate {
             return nand3.read();
         }
         else{
-
+            return nand4.read();
         }
-        return nand4.read();
     }
 
 
